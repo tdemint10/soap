@@ -1,0 +1,29 @@
+html {
+	height: 100%;
+	background-color: #085be0;
+}
+
+body {
+	/*background-color: #f4f4d9;*/
+	margin: auto;
+	height: 100%;
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.header {
+	margin-left: 5%;
+}
+
+#title {
+	text-align: center;
+}
+
+#sub {
+	text-align: center;
+}
+
+#dispatch {
+	margin-left: 10%;
+}
