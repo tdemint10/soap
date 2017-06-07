@@ -6,7 +6,6 @@ html {
 body {
 	/*background-color: #f4f4d9;*/
 	margin: auto;
-	height: 100%;
 	width: 50%;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -14,16 +13,62 @@ body {
 
 .header {
 	margin-left: 5%;
+	color: #020af9;
+	font-weight: bold;
+}
+
+.sub_assess {
+	margin-left: 5%;
+}
+
+.other_assess {
+	width: 56.5%;
 }
 
 #title {
+	color: #020af9;
 	text-align: center;
+	font-weight: bold;
 }
 
 #sub {
 	text-align: center;
 }
 
-#dispatch {
+#dispatch, #subjective, #objective {
 	margin-left: 10%;
+}
+
+#dispatch_text, #states_text, #admits_text, #other_assess {
+	width: 90%;
+	height: 5%;
+}
+
+#age_in, #weight_in, #cap_refill_in {
+	width: 10%;
+}
+
+#complaint_in, #moi_in, #circulation_in {
+	width: 50%;
+}
+
+#onset_in, #provokes_in, #quality_in, #radiates_in, #severity_in, #time_in, #export_in, #env_in, #prop_in {
+	width: 43.55%;
+}
+
+#similar_in {
+	width: 90%;
+}
+
+#other_in {
+	width:20%;
+}
+
+#medical_text, #medication_text, #impression_text {
+	width: 90%;
+	height: 2%;
+}
+
+#vitals_button {
+	width: 21.5%;
 }
