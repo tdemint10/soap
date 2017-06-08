@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	background-color: #085be0;
+	background-color: #4cce78;
 }
 
 body {
@@ -11,9 +11,13 @@ body {
 	margin-bottom: 10px;
 }
 
+.line {
+	color: #0b9138;
+}
+
 .header {
 	margin-left: 5%;
-	color: #020af9;
+	color: #0b9138;
 	font-weight: bold;
 }
 
@@ -26,7 +30,7 @@ body {
 }
 
 #title {
-	color: #020af9;
+	color: #0b9138;
 	text-align: center;
 	font-weight: bold;
 }
@@ -35,11 +39,11 @@ body {
 	text-align: center;
 }
 
-#dispatch, #subjective, #objective {
+#dispatch, #subjective, #objective, #assess, #plan {
 	margin-left: 10%;
 }
 
-#dispatch_text, #states_text, #admits_text, #other_assess {
+#dispatch_text, #states_text, #admits_text, #other_assess, #assessment_text, #other_assess_text {
 	width: 90%;
 	height: 5%;
 }
@@ -56,7 +60,7 @@ body {
 	width: 43.55%;
 }
 
-#similar_in {
+#similar_in, #arrival_notes_in {
 	width: 90%;
 }
 
@@ -71,4 +75,12 @@ body {
 
 #vitals_button {
 	width: 21.5%;
+}
+
+#plan_iv {
+	display: inline;
+}
+
+#response, #arrival, #plan_assessment, #plan_vital, #plan_o2 {
+	display: none;
 }

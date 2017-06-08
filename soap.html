@@ -32,14 +32,14 @@
     <h4 id="sub">Enter all important information and press 'Create' to generate the final report<br><br>
     Please ignore any unneeded sections</h4><br><br>
 
-    <h3 class="header">Dispatch Info</h3><br><br><br>
+    <hr><h3 class="header">Dispatch Info</h3><hr><br><br><br>
     <div id="dispatch">
       <input type="radio" name="res_code" id="emergent">Emergent&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="radio" name="res_code" id="non_emergent">Non-Emergent<br><br>
       <textarea id="dispatch_text" cols="75" rows="5" placeholder="Enter more dispatch info"></textarea><br><br><br>
     </div>
 
-    <h3 class="header">Subjective Info</h3><br><br><br>
+    <hr><h3 class="header">Subjective Info</h3><hr><br><br><br>
     <div id="subjective">
       <input type="text" id="age_in" placeholder="Age">
       <select id="time_sel">
@@ -145,7 +145,7 @@
       </div>
     </div>
 
-    <h3 class="header">Objective Info</h3><br><br><br>
+    <hr><h3 class="header">Objective Info</h3><hr><br><br><br>
     <div id="objective">
       <h4>Mentation:</h4>
       <input type="radio" name="mentation" id="alert">Alert - reacts to environmental stimuli<br><br>
@@ -455,26 +455,188 @@
       </div>
       <h4>Mobility</h4>
       <div class="sub_assess">
-          <input type="radio" class="mobility_check">Pt walks without assistance&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" class="mobility_check">Pt walks with assistance&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" class="mobility_check">Pt confined to bed<br><br>
+          <input type="radio" name="mobility_check">Pt walks without assistance&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="mobility_check">Pt walks with assistance&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="mobility_check">Pt confined to bed<br><br>
           <input type="text" id="other_mobility_in" class="other_assess" placeholder="Other comments..."><br><br>
       </div>
-      <textarea id="other_asses_text" cols="75" rows="5" placeholder="Other assessments"></textarea><br><br>
+      <textarea id="other_assess_text" cols="75" rows="5" placeholder="Other assessments"></textarea><br><br>
       <input type="text" id="export_in" placeholder="Export condition"><br><br>
       <input type="text" id="env_in" placeholder="Environment"><br><br>
       <input type="text" id="prop_in" placeholder="Pt property taken">&nbsp;&nbsp;
       <input type="checkbox" id="no_prop_check">No Pt property taken<br><br>
     </div>
 
-    <h3 class="header">Assessment Info</h3>
-    <div id="assess">
+    <hr><h3 class="header">Assessment Info</h3><hr><br><br><br>
+    <div id="assess">    
+      <textarea id="assessment_text" cols="75" rows="5" placeholder="Assessment"></textarea><br><br><br>
     </div>
 
-    <h3 class="header">Plan Info</h3>
+    <hr><h3 class="header">Plan Info</h3><hr><br><br><br>
     <div id="plan">
-    </div>
+      <select id="plan_sel">
+        <option value="1">Response</option>
+        <option value="2">Arrival</option>
+        <option value="3">Assessment</option>
+        <option value="4">Vital Signs</option>
+        <option value="5">O2</option>
+        <option value="6">IV/IO</option>
+        <option value="7">Blood Sugar</option>
+        <option value="8">CPR</option>
+        <option value="9">Capnography</option>
+        <option value="10">Airway OPA/NPA</option>
+        <option value="11">Airway OETT/NETT</option>
+        <option value="12">Airway LMA/Combi</option>
+        <option value="13">Airway Cric</option>
+        <option value="14">Airway Check</option>
+        <option value="15">Suction</option>
+        <option value="16">Drug</option>
+        <option value="17">Orders</option>
+        <option value="18">EKG</option>
+        <option value="19">EKG Fax</option>
+        <option value="20">Defib/Pacing</option>
+        <option value="21">Bandage</option>
+        <option value="22">Splint</option>
+        <option value="23">OTHER</option>
+        <option value="24">Extrication</option>
+        <option value="25">Spinal</option>
+        <option value="26">To Cot</option>
+        <option value="27">Refusal</option>
+        <option value="28">Pt Advised</option>
+        <option value="29">Ambulance</option>
+        <option value="30">Transfer Care</option>
+        <option value="31">Terminate Care</option>
+        <option value="32">Transport</option>
+        <option value="33">Radio Report</option>
+        <option value="34">Destination</option>
+        <option value="35">End of Contact</option>
+      </select><br><br><br>
 
+      <div id="response">
+        <input type="text" id="response_time_in" placeholder="Time"><br><br>
+        Code:&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="response_check">2&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="response_check">3&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="response_check">On location<br><br>
+        From&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="from_check">Quarters<br><br>
+        <textarea id="assessment_text" cols="75" rows="5"></textarea><br><br><br>
+      </div>
+
+      <div id="arrival">
+        <input type="text" id="arrival_time_in" placeholder="Time"><br><br>
+        <input type="text" id="pt_time_in" placeholder="Pt contact time"><br><br>
+        <input type="checkbox" id="staged_check">Staged<br><br>
+        <input type="text" id="location_in" placeholder="Location"><br><br>
+        <input type="text" id="cleared_in" placeholder="Cleared by">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="self_clear_check">Self Cleared<br><br>
+        <input type="text" id="arrival_notes_in" placeholder="Notes..."><br><br><br>
+      </div>
+
+      <div id="plan_assessment">
+        <input type="text" id="plan_assess_in" placeholder="Time"><br><br>
+        <input type="checkbox" class="plan_assess_check">ABC's<br><br>
+        <input type="checkbox" class="plan_assess_check">Physical Exam<br><br>
+        <input type="checkbox" class="plan_assess_check">History<br><br><br>
+      </div>
+
+      <div id="plan_vital">
+        <input type="text" id="vital_in" placeholder="Time"><br><br>
+        <input type="text" id="plan_hr_in" placeholder="Heart Rate">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="plan_hr_radio">Regular&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="plan_hr_radio">Irregular<br><br>
+        <input type="text" id="plan_bp_in" placeholder="Blood Pressure"><br><br>
+        <input type="text" id="plan_resp_in" placeholder="Resp. Rate"><br><br>
+        <input type="text" id="plan_sp_in" placeholder="SpO2">%<br><br>
+        <input type="checkbox" id="ra_check">RA&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="plan_o2_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
+        <input type="text" id="plan_breath_in" placeholder="Breath Sounds"><br><br>
+        <input type="text" id="planCO" placeholder="CO">&nbsp;&nbsp;%SpCO<br><br><br>
+      </div>
+
+      <div id="plan_o2">
+        <input type="text" id="o2_time_in" placeholder="Time"><br><br>
+        <input type="text" id="o2_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
+        <input type="radio" name="o2_radio">NC&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="o2_radio">NRB&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="o2_radio">Neb&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="o2_radio">CPAP&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="o2_radio">BVM&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="o2_radio">Blow by<br><br>
+        CPAP size:&nbsp;&nbsp;<input type="radio" name="cpap_size_radio">Large&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="cpap_size_radio">Medium<br><br>
+        <input type="checkbox" id="bvm_check">BVM with ResQPod<br><br>
+        <input type="text" id="o2_results_in" placeholder="Notes..."><br><br><br>
+      </div>
+
+      <div id="plan_iv">
+        <input type="text" id="iv_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="iv_radio">IV&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="iv_radio">IO<br><br>
+        <select id="iv_drop">
+          <option value="0">--Fluid--</option>
+          <option value="1">NS</option>
+          <option value="2">Saline Lock</option>
+          <option value="3">None</option>
+        </select><br><br>
+        <input type="text" id="infused_in" placeholder="Amount infused"><br><br>
+        <input type="radio" name="iv_radio2">TKO&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="iv_radio2">Bolus&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="iv_radio2">gtts<br><br>
+        <input type="text" id="iv_in">&nbsp;&nbsp;gtts&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="iv_drop2">
+          <option value="1">Macro 10gtts</option>
+          <option value="2">Micro 60gtts</option>
+          <option value="3">Macro 15gtts</option>
+        </select><br><br>
+        <select id="iv_drop3">
+          <option value="0">--Catheter--</option>
+          <option value="1">12 g</option>
+          <option value="2">14 g</option>
+          <option value="3">16 g</option>
+          <option value="4">18 g</option>
+          <option value="5">20 g</option>
+          <option value="6">22 g</option>
+          <option value="7">24 g</option>
+          <option value="8">Adult BIG</option>
+          <option value="9">Ped BIG</option>
+          <option value="10">15 g IO</option>
+          <option value="11">18 g IO</option>
+        </select><br><br>
+        <select id="iv_drop4">
+          <option value="0">--Site--</option>
+          <option value="1">Left Hand</option>
+          <option value="2">Left Wrist</option>
+          <option value="3">Left Forearm</option>
+          <option value="4">Left Antecubital</option>
+          <option value="5">Left Jugular</option>
+          <option value="6">Left Tibia</option>
+          <option value="7">Right Hand</option>
+          <option value="8">Right Wrist</option>
+          <option value="9">Right Forearm</option>
+          <option value="10">Right Antecubital</option>
+          <option value="11">Right Jugular</option>
+          <option value="12">Right Tibia</option>          
+        </select><br><br>
+        <input type="text" id="iv_other_in" placeholder="Other"><br><br>
+        <select id="iv_drop5">
+          <option value="0">--Attempt(s)--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select><br><br>
+        <input type="radio" name="iv_radio3">Successful&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="iv_radio3">Unsuccessful<br><br>
+        <input type="text" id="iv_results_in" placeholder="Results"><br><br><br>
+      </div>
+    </div>
   </body>
 
   </html>
