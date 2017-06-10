@@ -4,7 +4,6 @@ html {
 }
 
 body {
-	/*background-color: #f4f4d9;*/
 	margin: auto;
 	width: 50%;
 	margin-top: 10px;
@@ -43,7 +42,7 @@ body {
 	margin-left: 10%;
 }
 
-#dispatch_text, #states_text, #admits_text, #other_assess, #assessment_text, #other_assess_text {
+#dispatch_text, #states_text, #admits_text, #other_assess, #assessment_text, #other_assess_text, #air_adv_result_text, #oett_result_text, #suction_text, #drug_text, #orders_text, #ekg_text, #bandage_text, #splint_text, #extric_text, #spinal_text, #stretcher_text, #refusal_text {
 	width: 90%;
 	height: 5%;
 }
@@ -77,10 +76,10 @@ body {
 	width: 21.5%;
 }
 
-#plan_iv {
+#plan_refusal {
 	display: inline;
 }
 
-#response, #arrival, #plan_assessment, #plan_vital, #plan_o2 {
+#plan_o2, #plan_iv, #plan_blood, #plan_cpr, #plan_capno, #plan_air_adv, #plan_air_oett, #plan_air_cric, #plan_suction, #plan_drug, #plan_orders, #plan_ekg, #plan_bandage, #plan_splint, #plan_extric, #plan_spinal, #plan_stretcher {
 	display: none;
 }

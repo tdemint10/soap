@@ -187,6 +187,15 @@
         <option value="1">Labored</option>
         <option value="2">Non-Labored</option>
       </select><br><br>
+      <input type="text" id="lung_in" placeholder="Lung Sounds"><br><br>
+      Gastric sounds:&nbsp;&nbsp;
+      <select id="gastric_sel">
+        <option value="0">Not checked</option>
+        <option value="1">Positive</option>
+        <option value="2">Negative</option>
+      </select><br><br>
+      <input type="text" id="capno_val_in" placeholder="Capnography Value">&nbsp;&nbsp;mmHg&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="capno_wave_check">Waveform present<br><br>
       <input type="text" id="circulation_in" placeholder="Circulation">&nbsp;&nbsp;
       <input type="checkbox" class="circulation">No obvious bleeding<br><br>
       <select id="skin_color_sel">
@@ -484,7 +493,7 @@
         <option value="7">Blood Sugar</option>
         <option value="8">CPR</option>
         <option value="9">Capnography</option>
-        <option value="10">Airway OPA/NPA</option>
+        <option value="10">Airway Advanced-B</option>
         <option value="11">Airway OETT/NETT</option>
         <option value="12">Airway LMA/Combi</option>
         <option value="13">Airway Cric</option>
@@ -512,48 +521,6 @@
         <option value="35">End of Contact</option>
       </select><br><br><br>
 
-      <div id="response">
-        <input type="text" id="response_time_in" placeholder="Time"><br><br>
-        Code:&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" class="response_check">2&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" class="response_check">3&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" class="response_check">On location<br><br>
-        From&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" id="from_check">Quarters<br><br>
-        <textarea id="assessment_text" cols="75" rows="5"></textarea><br><br><br>
-      </div>
-
-      <div id="arrival">
-        <input type="text" id="arrival_time_in" placeholder="Time"><br><br>
-        <input type="text" id="pt_time_in" placeholder="Pt contact time"><br><br>
-        <input type="checkbox" id="staged_check">Staged<br><br>
-        <input type="text" id="location_in" placeholder="Location"><br><br>
-        <input type="text" id="cleared_in" placeholder="Cleared by">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" id="self_clear_check">Self Cleared<br><br>
-        <input type="text" id="arrival_notes_in" placeholder="Notes..."><br><br><br>
-      </div>
-
-      <div id="plan_assessment">
-        <input type="text" id="plan_assess_in" placeholder="Time"><br><br>
-        <input type="checkbox" class="plan_assess_check">ABC's<br><br>
-        <input type="checkbox" class="plan_assess_check">Physical Exam<br><br>
-        <input type="checkbox" class="plan_assess_check">History<br><br><br>
-      </div>
-
-      <div id="plan_vital">
-        <input type="text" id="vital_in" placeholder="Time"><br><br>
-        <input type="text" id="plan_hr_in" placeholder="Heart Rate">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="plan_hr_radio">Regular&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="plan_hr_radio">Irregular<br><br>
-        <input type="text" id="plan_bp_in" placeholder="Blood Pressure"><br><br>
-        <input type="text" id="plan_resp_in" placeholder="Resp. Rate"><br><br>
-        <input type="text" id="plan_sp_in" placeholder="SpO2">%<br><br>
-        <input type="checkbox" id="ra_check">RA&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="plan_o2_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
-        <input type="text" id="plan_breath_in" placeholder="Breath Sounds"><br><br>
-        <input type="text" id="planCO" placeholder="CO">&nbsp;&nbsp;%SpCO<br><br><br>
-      </div>
-
       <div id="plan_o2">
         <input type="text" id="o2_time_in" placeholder="Time"><br><br>
         <input type="text" id="o2_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
@@ -565,7 +532,7 @@
         <input type="radio" name="o2_radio">Blow by<br><br>
         CPAP size:&nbsp;&nbsp;<input type="radio" name="cpap_size_radio">Large&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="cpap_size_radio">Medium<br><br>
-        <input type="checkbox" id="bvm_check">BVM with ResQPod<br><br>
+        <input type="checkbox" id="bvm_check">BVM<br><br>
         <input type="text" id="o2_results_in" placeholder="Notes..."><br><br><br>
       </div>
 
@@ -636,7 +603,297 @@
         <input type="radio" name="iv_radio3">Unsuccessful<br><br>
         <input type="text" id="iv_results_in" placeholder="Results"><br><br><br>
       </div>
+
+      <div id="plan_blood">
+        <input type="text" id="blood_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="blood_location_radio">Finger&nbsp;&nbsp;
+        <input type="radio" name="blood_location_radio">IV<br><br>
+        <input type="text" id="blood_read_in" placeholder="Reading">&nbsp;&nbsp;mg/dL<br><br><br>
+      </div>
+
+      <div id="plan_cpr">
+        <input type="text" id="cpr_time_in" placeholder="Time"><br><br>
+        <input type="checkbox" class="cpr_check">No bystander CPR in progess<br><br>
+        <input type="checkbox" class="cpr_check">CPR in progress on arrival<br><br>
+        <input type="checkbox" class="cpr_check">Initial 2 min.<br><br>
+        <input type="checkbox" class="cpr_check">CPR stopped<br><br>
+        <input type="checkbox" class="cpr_check">CPR started or resumed<br><br><br>
+      </div>
+
+      <div id="plan_capno">
+        <input type="text" id="capno_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="capno_radio">NC&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="capno_radio">ET<br><br>
+        <input type="text" id="co2_in" placeholder="CO2 Value">&nbsp;&nbsp;mmHg<br><br>
+        <input type="text" id="rr_in" placeholder="RR Rate"><br><br>  
+        <select id="capno_sel">
+          <option value="0">--Waveform--</option>
+          <option value="1">Normal waveform</option>
+          <option value="2">Prolonged phase II with increased slope in phase III</option>
+          <option value="3">Other</option>
+        </select><br><br>
+        <input type="text" id="capno_other_in" placeholder="Other"><br><br><br>
+      </div>
+
+      <div id="plan_air_adv">
+        <input type="text" id="air_adv_time_in" placeholder="Time"><br><br>
+        <input type="text" id="opa_in" placeholder="OPA Size"><br><br>
+        <input type="text" id="npa_in" placeholder="NPA Size">&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="air_adv_sel">
+          <option value="0">--Nare--</option>
+          <option value="1">Left</option>
+          <option value="2">Right</option>
+          <option value="3">Both</option>
+        </select><br><br>
+        <input type="text" id="king_in" placeholder="King tuge Size"><br><br>
+        <input type="checkbox" id="gag_check">Gag Reflex<br><br>        
+        <textarea id="air_adv_result_text" cols="75" rows="5" placeholder="Results"></textarea><br><br>
+      </div>
+
+      <div id="plan_air_oett">
+        <input type="text" id="air_oett_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="intubate_radio">Oral Intubation&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="intubate_radio">Nasal Intubation<br><br>
+        <input type="text" id="intubate_person_in" placeholder="Who"><br><br>
+        <input type="text" id="oett_size_in" placeholder="Size">&nbsp;&nbsp;mm&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="oett_depth_in" placeholder="Depth">&nbsp;&nbsp;cm<br><br>
+        <input type="text" id="oett_blade_in" placeholder="Blade"><br><br>
+        <input type="checkbox" class="oett_check">Secured&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="oett_check">with Cricoid Pressure&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="oett_check">with BURP<br><br>
+        <input type="text" id="spo2_pre_in" placeholder="SpO2 pre">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="spo2_post_in" placeholder="SpO2 post"><br><br>
+        <input type="text" id="spo2_attempt_in" placeholder="Attempt(s)">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="attempt_radio">Successful&nbsp;&nbsp;
+        <input type="radio" name="attempt_radio">Unsuccessful<br><br>
+        <h4>Verification</h4>
+        <select id=oeet_radio1>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;Visualized through the chords<br><br>
+        <select id=oeet_radio2>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;EDD Esophageal detection<br><br>
+        <select id=oeet_radio3>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;Capnography waveform<br><br>
+        <select id=oeet_radio4>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;Lung sounds<br><br>
+        <select id=oeet_radio5>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;Gastric sounds<br><br>
+        <select id=oeet_radio6>
+          <option value="1">Not checked</option>
+          <option value="2">Positive</option>
+          <option value="3">Negative</option>
+        </select>&nbsp;&nbsp;Chest rise and fall<br><br>        
+        <textarea id="oett_result_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_air_cric">
+        <input type="text" id="air_cric_time_in" placeholder="Time"><br><br>
+        <textarea id="air_cric_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br>
+      </div>
+
+      <div id="plan_suction">
+        <input type="text" id="suction_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="suction_radio1">Yankuer&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="suction_radio1">French Tip<br><br>
+        <input type="text" id="french_size_in" placeholder="French tip size">&nbsp;&nbsp;fr<br><br>
+        <textarea id="suction_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br>     
+      </div>
+
+      <div id="plan_drug">
+        <input type="text" id="drug_time_in" placeholder="Time"><br><br>
+        <select id="drug_sel">
+          <option value="1">Adenosine</option>
+          <option value="2">Albuterol</option>
+          <option value="3">Albuterol/Atrovent</option>
+          <option value="4">Aspirin</option>
+          <option value="5">Amiodarone</option>
+          <option value="6">Atropine</option>
+          <option value="7">Atrovent</option>
+          <option value="8">Benzocaine Spray</option>
+          <option value="9">Calcium Chloride</option>
+          <option value="10">Dexamethasone</option>
+          <option value="11">Diazepam</option>
+          <option value="12">Diltiazem</option>
+          <option value="13">D50</option>
+          <option value="14">D25</option>
+          <option value="15">Dextrose</option>
+          <option value="16">Diphenhydramine</option>
+          <option value="17">Dopamine</option>
+          <option value="18">Epi 1:1000</option>
+          <option value="19">Epi 1:10000</option>
+          <option value="20">Etomidate</option>
+          <option value="21">Fentanyl</option>
+          <option value="22">Furosemide</option>
+          <option value="23">Glucagon</option>
+          <option value="24">Haldol</option>
+          <option value="25">Lidocaine</option>
+          <option value="26">Magnesium</option>
+          <option value="27">Morphine</option>
+          <option value="28">Narcan</option>
+          <option value="29">NeoSynephrine</option>
+          <option value="30">Nitroglycerin</option>
+          <option value="31">Normal Saline</option>
+          <option value="32">Phenergan</option>
+          <option value="33">Racemic Epi</option>
+          <option value="34">Sodium Bicarb</option>
+          <option value="35">Succinylcholine</option>
+          <option value="36">Tetracaine</option>
+          <option value="37">Vecuronium</option>
+        </select><br><br>
+        <input type="text" id="drug_dose_in" placeholder="Dose"><br><br>
+        <select id="drug_route_sel">
+          <option value="1">IV</option>
+          <option value="2">IO</option>
+          <option value="3">IM</option>
+          <option value="4">SQ</option>
+          <option value="5">PO</option>
+          <option value="6">SL</option>
+          <option value="7">NEB</option>
+          <option value="8">ET</option>
+        </select><br><br>
+        <textarea id="drug_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br> 
+      </div>
+
+      <div id="plan_orders">
+        <input type="text" id="orders_time_in" placeholder="Time"><br><br>
+        <select id="hospital_sel">
+          <option value="1">Shands</option>
+          <option value="2">North Florida</option>
+          <option value="3">ACFR</option>
+        </select><br><br>
+        <input type="text" id="md_in" placeholder="MD"><br><br>        
+        <textarea id="orders_text" cols="75" rows="5" placeholder="Orders"></textarea><br><br><br>  
+      </div>
+
+      <div id="plan_ekg">
+        <input type="text" id="ekg_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="ekg_radio1">3 lead&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="ekg_radio1">12 lead&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="ekg_radio1">Pads<br><br>
+        <select id="ekg_sel">
+          <option value="1">Normal sinus rhythm</option>
+          <option value="2">Atrial fib</option>
+          <option value="3">Atrial flutter</option>
+          <option value="4">Sinus tachycardia</option>
+          <option value="5">Sinus bradycardia</option>
+          <option value="6">Sinus arrythmia</option>
+          <option value="7">Paced rhythm</option>
+          <option value="8">A-fib</option>
+          <option value="9">A-flutter</option>
+          <option value="10">MAT</option>
+          <option value="11">Atrial tachycardia</option>
+          <option value="12">Junctional</option>
+          <option value="13">Junctional tachycardia</option>
+          <option value="14">IVR</option>
+          <option value="15">VT</option>
+          <option value="16">Wide complex tachycardia</option>
+          <option value="17">SVT</option>
+          <option value="18">Asystole</option>
+          <option value="19">V-fib</option>
+        </select><br><br>
+        <select id="ekg_hospital_sel">
+          <option value="1">Shands</option>
+          <option value="2">North Florida</option>
+          <option value="3">ACFR</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="hospital_confirm">Confirmed with hospital<br><br>
+        <textarea id="ekg_text" cols="75" rows="5" placeholder="Additional Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_bandage">
+        <input type="text" id="bandage_time_in" placeholder="Time"><br><br>
+        <select id="bleed_type_in">
+          <option value="0">--Type of bleed--</option>
+          <option value="1">Arterial</option>
+          <option value="2">Capillary</option>
+          <option value="3">Venous</option>          
+        </select><br><br>
+        <input type="text" id="location_in" placeholder="Location"><br><br>
+        <input type="text" id="material_in" placeholder="Material"><br><br>
+        <textarea id="bandage_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_splint">
+        <input type="text" id="splint_time_in" placeholder="Time"><br><br>
+        <input type="text" id="splint_loc_in" placeholder="Location"><br><br>
+        <textarea id="splint_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_extric">
+        <input type="text" id="extric_time_in" placeholder="Time"><br><br>
+        <textarea id="extric_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_spinal">
+        <input type="text" id="spinal_time_in" placeholder="Time"><br><br>
+        <input type="checkbox" class="spinal_check">Manual C-Spine<br><br>
+        <input type="checkbox" class="spinal_check">C-Collar<br><br>
+        <input type="checkbox" class="spinal_check">Board<br><br>
+        <input type="checkbox" class="spinal_check">Straps<br><br>
+        <input type="checkbox" class="spinal_check">Blocks<br><br>
+        <input type="checkbox" class="spinal_check">Tape<br><br>
+        <input type="checkbox" class="spinal_check">(+) CMS pre/post immobilization<br><br>
+        <input type="checkbox" class="spinal_check">No stabilization needed<br><br>
+        <input type="text" id="spinal_pms_in" placeholder="Pulse motor sensation"><br><br>
+        <textarea id="spinal_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_stretcher">
+        <input type="text" id="stretcher_time" placeholder="Time"><br><br>
+        <select id="stretcher_sel">
+          <option value="1">Walked without assistance</option>
+          <option value="2">Walked with assisstance</option>
+          <option value="3">Stand and turn to stretcher</option>
+          <option value="4">Unable to walk</option>
+          <option value="5">Bed-ridden</option>
+        </select><br><br>
+        <select id="stretcher_pos_sel">
+          <option value="0">--Position--</option>
+          <option value="1">Supine</option>
+          <option value="2">Semi-fowlers</option>
+          <option value="3">Fowlers</option>
+          <option value="4">High-fowlers</option>
+          <option value="5">Left lateral</option>
+          <option value="6">Prone</option>
+          <option value="7">Bench seat</option>
+        </select><br><br>
+        <textarea id="stretcher_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_refusal">
+        <input type="text" id="refusal_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="via_radio">Radio&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="via_radio">Telephone<br><br>
+        <input type="text" id="refusal_contact_in" placeholder="Contact">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="contact_radio">MD&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="contact_radio">RN<br><br>
+        <select id="refusal_hospital_sel">
+          <option value="1">Shands</option>
+          <option value="2">North Florida</option>
+          <option value="3">ACFR</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="refusal_res_radio">Accepted&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="refusal_res_radio">Declined<br><br>
+        <input type="checkbox" class="signed_check">Signed by patient&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="signed_check">Signed by guardian<br><br>
+        <textarea id="refusal_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
     </div>
+
   </body>
 
   </html>
