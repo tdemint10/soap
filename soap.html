@@ -892,6 +892,79 @@
         <input type="checkbox" class="signed_check">Signed by guardian<br><br>
         <textarea id="refusal_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
+
+      <div id="plan_advised">
+        <input type="text" id="advised_time_in" placeholder="Time"><br><br>
+        <textarea id="advised_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_transfer">
+        <input type="text" id="transfer_time_in" placeholder="Time"><br><br>
+        <input type="checkbox" class="transfer_check">AMR EMT-B<br><br>
+        <input type="checkbox" class="transfer_check">AMR EMT-P<br><br>
+        <input type="checkbox" class="transfer_check">AMR EMT-P Student<br><br>
+        <input type="checkbox" class="transfer_check">MD<br><br>
+        <input type="checkbox" class="transfer_check">RN<br><br>
+        <input type="checkbox" class="transfer_check">PA<br><br>
+        <input type="text" id="transfer_other_in" placeholder="Other"><br><br>
+        <select id="eoc_sel">
+          <option value="0">--EOC--</option>
+          <option value="1">BIS</option>
+          <option value="2">At hospital</option>
+          <option value="3">Report left at hospital</option>
+        </select>
+      </div>
+
+      <div id="plan_terminate">
+        <input type="text" id="terminate_time_in" placeholder="Time"><br><br>
+        <input type="text" id="term_md_in" placeholder="MD"><br><br>
+        <input type="checkbox" id="dnr_check">DNR/Advance Directives<br><br><br>
+      </div>
+
+      <div id="plan_transport">
+        <input type="text" id="transport_time_in" placeholder="Time"><br><br>
+        <input type="text" id="trans_arrive_in" placeholder="Arrival Time">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="trans_depart_in" placeholder="Departure Time"><br><br>
+        <select id="trans_code_sel">
+          <option value="0">--Code--</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">None</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="trans_via_sel">
+          <option value="0">--Via--</option>
+          <option value="1">AMR</option>
+          <option value="2">CSFD</option>
+          <option value="3">POV</option>
+          <option value="4">CSPD</option>
+          <option value="5">Other</option>
+        </select><br><br>
+        <select id="transport_hospital_sel1">
+          <option value="0">--Hospital--</option>
+          <option value="1">Shands</option>
+          <option value="2">North Florida</option>
+          <option value="3">ACFR</option>
+        </select><br><br>
+        <select id="transport_hospital_sel2">
+          <option value="0">--Diverted To--</option>
+          <option value="1">Shands</option>
+          <option value="2">North Florida</option>
+          <option value="3">ACFR</option>
+        </select><br><br><br>
+      </div>
+
+      <div id="plan_radio">
+        <input type="text" id="radio_time_in" placeholder="Time"><br><br>
+        <input type="radio" name="radio_via">Radio&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="radio_via">Phone<br><br>
+        <input type="text" id="radio_md_in" placeholder="MD"><br><br>
+        <input type="text" id="radio_rn_in" placeholder="RN"><br><br>
+        <input type="checkbox" id="radio_poison">Poison Control<br><br>
+        <textarea id="radio_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
+      </div>
+
+      <div id="plan_other">
+        <textarea id="other_text" cols="75" rows="5" placeholder="Other comments"></textarea><br><br><br></div>
     </div>
 
   </body>
