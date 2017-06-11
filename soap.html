@@ -34,20 +34,20 @@
 
     <hr><h3 class="header">Dispatch Info</h3><hr><br><br><br>
     <div id="dispatch">
-      <input type="radio" name="res_code" id="emergent">Emergent&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="radio" name="res_code" id="non_emergent">Non-Emergent<br><br>
-      <textarea id="dispatch_text" cols="75" rows="5" placeholder="Enter more dispatch info"></textarea><br><br><br>
+      <input type="radio" name="res_code">Emergent&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="res_code">Non-Emergent<br><br>
+      <textarea id="dispatch_text" class="large_text" cols="75" rows="5" placeholder="Enter more dispatch info"></textarea><br><br><br>
     </div>
 
     <hr><h3 class="header">Subjective Info</h3><hr><br><br><br>
     <div id="subjective">
-      <input type="text" id="age_in" placeholder="Age">
+      <input type="text" id="age_in" class="small_in" placeholder="Age">
       <select id="time_sel">
         <option value="years">years</option>
         <option value="months">months</option>
         <option value="days">days</option>
       </select>&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="weight_in" placeholder="Weight">
+      <input type="text" id="weight_in" class="small_in" placeholder="Weight">
       <select id="weight_sel">
         <option value="lbs">lbs</option>
         <option value="kgs">kgs</option>
@@ -55,18 +55,18 @@
       </select>&nbsp;&nbsp;&nbsp;&nbsp;
       Gender:&nbsp;&nbsp;<input type="radio" name="gender" id="male">Male&nbsp;&nbsp;
       <input type="radio" name="gender" id="female">Female<br><br>
-      <input type="text" id="complaint_in" placeholder="Chief Complaint">&nbsp;&nbsp;
+      <input type="text" id="complaint_in" class="large_in" placeholder="Chief Complaint">&nbsp;&nbsp;
       <input type="checkbox" id=no_complaint>No complaint<br><br>
       <input type="text" id="moi_in" placeholder="MOI/NOI"><br><br>
-      <textarea id="states_text" cols="75" rows="5" placeholder="Patient states..."></textarea><br><br>
+      <textarea id="states_text" class="large_text" cols="75" rows="5" placeholder="Patient states..."></textarea><br><br>
       <h4>OPQRST:</h4>
-      <input type="text" id="onset_in" placeholder="Onset">&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="provokes_in" placeholder="Provokes"><br><br>
-      <input type="text" id="quality_in" placeholder="Quality">&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="radiates_in" placeholder="Radiates"><br><br>
-      <input type="text" id="severity_in" placeholder="Severity">&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="time_in" placeholder="Time"><br><br>
-      <input type="text" id="similar_in" placeholder="Hx of similar incident"><br><br>
+      <input type="text" id="onset_in" class="med_in" placeholder="Onset">&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="provokes_in" class="med_in" placeholder="Provokes"><br><br>
+      <input type="text" id="quality_in" class="med_in" placeholder="Quality">&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="radiates_in" class="med_in" placeholder="Radiates"><br><br>
+      <input type="text" id="severity_in" class="med_in" placeholder="Severity">&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="time_in" class="med_in" placeholder="Time"><br><br>
+      <input type="text" id="similar_in" class="med_in" placeholder="Hx of similar incident"><br><br>
       <textarea id="admits_text" cols="75" rows="5" placeholder="Patient admits..."></textarea><br><br>
       <h4>Patient Denies:</h4>
       <input type="checkbox" class="deny">HA
@@ -101,47 +101,47 @@
       &nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" class="deny">Foreign Travel<br><br>
       <input type="text" id="other_deny_in" placeholder="Other"><br><br><br>
-      <textarea id="medical_text" cols="75" rows="2" placeholder="Medical History"></textarea><br><br>
-      <textarea id="medication_text" cols="74" rows="2" placeholder="Rx Medications"></textarea><br><br>
+      <textarea id="medical_text" class="small_text" cols="75" rows="2" placeholder="Medical History"></textarea><br><br>
+      <textarea id="medication_text" class="small_text" cols="74" rows="2" placeholder="Rx Medications"></textarea><br><br>
       <h4>OTC Medications:</h4>
       <input type="checkbox" class="otc_check">Aspirin&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" class="otc_check">APAP&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" class="otc_check">Ibuprofen&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="other_meds_in" placeholder="Other"><br><br>
+      <input type="text" id="other_meds_in" class="med_in" placeholder="Other"><br><br>
       <h4>Allergies:</h4>
       <input type="checkbox" class="allergy_check">NKDA&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" id="other_allergy_in" placeholder="Other"><br><br>
+      <input type="text" id="other_allergy_in" class="med_in" placeholder="Other"><br><br>
       <h4>Vehicle:</h4>
-      <div class="sub_assess">
-        <input type="text" id="car_type_in" placeholder="Type"><br><br>
-        <input type="text" id="car_dir_in" placeholder="Direction"><br><br>
-        <input type="text" id="car_speed_in" placeholder="Speed"><br><br>
-        <input type="text" id="car_weather_in" placeholder="Weather"><br><br>
+      <div class="sub_cat">
+        <input type="text" id="car_type_in" class="med_in" placeholder="Type"><br><br>
+        <input type="text" id="car_dir_in" class="med_in" placeholder="Direction"><br><br>
+        <input type="text" id="car_speed_in" class="med_in" placeholder="Speed"><br><br>
+        <input type="text" id="car_weather_in" class="med_in" placeholder="Weather"><br><br>
         <h5>Impact:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
             <input type="checkbox" class="impact_check">Frontal&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="checkbox" class="impact_check">Rear end&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="checkbox" class="impact_check">Lateral&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="checkbox" class="impact_check">Rotational&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="checkbox" class="impact_check">Rollover&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="checkbox" class="impact_check">Angular<br><br>
-            <input type="text" id="other_impact_in" class="other_assess" placeholder="Other comments..."><br><br>
+            <input type="text" id="other_impact_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
-        <input type="text" id="car_dash_in" placeholder="Dash">&nbsp;&nbsp;
+        <input type="text" id="car_dash_in" class="med_in" placeholder="Dash">&nbsp;&nbsp;
         <input type="checkbox" class="dash_check">No damage<br><br>
-        <input type="text" id="car_wind_in" placeholder="Windshield">&nbsp;&nbsp;
+        <input type="text" id="car_wind_in" class="med_in" placeholder="Windshield">&nbsp;&nbsp;
         <input type="checkbox" class="windshield_check">No damage<br><br>
-        <input type="text" id="car_steer_in" placeholder="Steering Wheel">&nbsp;&nbsp;
+        <input type="text" id="car_steer_in" class="med_in" placeholder="Steering Wheel">&nbsp;&nbsp;
         <input type="checkbox" class="steer_check">No damage<br><br>
-        <input type="text" id="car_intrusion_in" placeholder="Intrusion">&nbsp;&nbsp;
+        <input type="text" id="car_intrusion_in" class="med_in" placeholder="Intrusion">&nbsp;&nbsp;
         <input type="checkbox" class="intrusion_check">No damage<br><br>
-        <input type="text" id="car_air_in" placeholder="Airbags">&nbsp;&nbsp;
+        <input type="text" id="car_air_in" class="med_in" placeholder="Airbags">&nbsp;&nbsp;
         <input type="checkbox" class="air_check">Airbags not deployed<br><br>
-        <input type="text" id="car_moi_in" placeholder="MOI">&nbsp;&nbsp;
+        <input type="text" id="car_moi_in" class="med_in" placeholder="MOI">&nbsp;&nbsp;
         <input type="checkbox" class="moi_check">Up and over&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="moi_check">Down and under&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="moi_check">Ejection<br><br>
-        <input type="text" id="damage_in" placeholder="Other damage"><br><br><br>
+        <input type="text" id="damage_in" class="med_in" placeholder="Other damage"><br><br><br>
       </div>
     </div>
 
@@ -156,7 +156,7 @@
       <input type="checkbox" class="oriented_to">Place&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" class="oriented_to">Time&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" class="oriented_to">Event<br><br>
-      <textarea id="impression_text" cols="75" rows="2" placeholder="General impression"></textarea><br><br>
+      <textarea id="impression_text" class="small_text" cols="75" rows="2" placeholder="General impression"></textarea><br><br>
       <select id="airway_sel">
         <option value="0">--Airway--</option>
         <option value="1">Patent</option>
@@ -187,16 +187,16 @@
         <option value="1">Labored</option>
         <option value="2">Non-Labored</option>
       </select><br><br>
-      <input type="text" id="lung_in" placeholder="Lung Sounds"><br><br>
+      <input type="text" id="lung_in" class="med_in" placeholder="Lung Sounds"><br><br>
       Gastric sounds:&nbsp;&nbsp;
       <select id="gastric_sel">
         <option value="0">Not checked</option>
         <option value="1">Positive</option>
         <option value="2">Negative</option>
       </select><br><br>
-      <input type="text" id="capno_val_in" placeholder="Capnography Value">&nbsp;&nbsp;mmHg&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="capno_val_in" class="med_in" placeholder="Capnography Value">&nbsp;&nbsp;mmHg&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="checkbox" id="capno_wave_check">Waveform present<br><br>
-      <input type="text" id="circulation_in" placeholder="Circulation">&nbsp;&nbsp;
+      <input type="text" id="circulation_in" class="med_in" placeholder="Circulation">&nbsp;&nbsp;
       <input type="checkbox" class="circulation">No obvious bleeding<br><br>
       <select id="skin_color_sel">
         <option value="0">--Skin Color--</option>
@@ -217,7 +217,7 @@
         <option value="2">Diaphoretic</option>
         <option value="3">Clammy</option>
       </select>&nbsp;&nbsp;&nbsp;&nbsp;
-      Cap Refill:&nbsp;&nbsp;<input type="text" id="cap_refill_in" value="2">&nbsp;&nbsp;seconds<br><br>
+      Cap Refill:&nbsp;&nbsp;<input type="text" id="cap_refill_in" class="small_in" value="2">&nbsp;&nbsp;seconds<br><br>
       <select id="pulse_loc_sel">
         <option value="0">--Pulse Location--</option>
         <option value="1">Radial</option>
@@ -245,7 +245,7 @@
       </select><br><br>
       <h4>Initial Assessment:</h4>
       <h5>Head:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="head_check">Atraumatic&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="head_check">Teeth Intact&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="head_check">Tracking&nbsp;&nbsp;&nbsp;&nbsp;
@@ -253,12 +253,12 @@
         <input type="checkbox" class="head_check">Swallows without difficulty&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="head_check">No tongue laceration&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="head_check">(-) Gag reflex<br><br>
-        <input type="text" id="other_head_in" class="other_assess" placeholder="Other comments..."><br><br>
-        <input type="text" id="left_pupil_in" placeholder="Left Pupil">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="right_pupil_in" placeholder="Right Pupil"><br><br>
+        <input type="text" id="other_head_in" class="large_in" placeholder="Other comments..."><br><br>
+        <input type="text" id="left_pupil_in" class="small_in" placeholder="Left Pupil">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="right_pupil_in" class="small_in" placeholder="Right Pupil"><br><br>
       </div>
       <h5>Neck:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="neck_check">No JVD&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="neck_check">No edema&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="neck_check">No deformities&nbsp;&nbsp;&nbsp;&nbsp;
@@ -266,19 +266,19 @@
         <input type="checkbox" class="neck_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="neck_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="neck_check">No accessory muscle usage<br><br>
-        <input type="text" id="other_neck_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_neck_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Shoulder:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="shoulder_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="shoulder_check">No deformities&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="shoulder_check">No crepitus&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="shoulder_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="shoulder_check">No hematoma<br><br>
-        <input type="text" id="other_shoulder_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_shoulder_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Chest:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="chest_check">Equal rise and fall&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="chest_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="chest_check">No deformity&nbsp;&nbsp;&nbsp;&nbsp;
@@ -289,10 +289,10 @@
         <input type="checkbox" class="chest_check">Barrel chest<br>
         <input type="checkbox" class="chest_check">Pacemaker&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="chest_check">Chest scar (zipper)<br><br>
-        <input type="text" id="other_chest_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_chest_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Breath Sounds:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="breath_check">Clear&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="breath_check">Inspiratory wheezes&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="breath_check">Expiratory wheezes&nbsp;&nbsp;&nbsp;&nbsp;
@@ -303,10 +303,10 @@
         <input type="checkbox" class="breath_check">Diminished&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="breath_check">Aspiration&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="breath_check">Absent<br><br>
-        <input type="text" id="other_breath_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_breath_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Abdomen:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="abdomen_check">Soft&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="abdomen_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="abdomen_check">No rigidity&nbsp;&nbsp;&nbsp;&nbsp;
@@ -316,22 +316,22 @@
         <input type="checkbox" class="abdomen_check">No pulses&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="abdomen_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="abdomen_check">No hematoma<br><br>
-        <input type="text" id="other_abdomen_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_abdomen_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>GU/GI:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="gu_check">No incontinence of urine or feces<br><br>
-        <input type="text" id="other_gu_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_gu_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Pelvis:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="pelvis_check">Stable&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="pelvis_check">No deformities&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="pelvis_check">No crepitus<br><br>
-        <input type="text" id="other_pelvis_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_pelvis_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Legs:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="legs_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="legs_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="legs_check">No numbness/tingling&nbsp;&nbsp;&nbsp;&nbsp;
@@ -340,10 +340,10 @@
         <input type="checkbox" class="legs_check">No edema&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="legs_check">(+) CMS&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="legs_check">= strength push/pull<br><br>
-        <input type="text" id="other_legs_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_legs_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Arms:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="arms_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="arms_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="arms_check">No numbness/tingling&nbsp;&nbsp;&nbsp;&nbsp;
@@ -352,25 +352,25 @@
         <input type="checkbox" class="arms_check">No edema&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="arms_check">(+) CMS&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="arms_check">= strength grip <br><br>
-        <input type="text" id="other_arms_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_arms_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>CTLS:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="ctls_check">Inline&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="ctls_check">No deformities&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="ctls_check">No tenderness<br><br>
-        <input type="text" id="other_ctls_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_ctls_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Back:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="back_check">No tenderness&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="back_check">No trauma&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="back_check">No deformities&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="back_check">No hematoma<br><br>
-        <input type="text" id="other_back_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_back_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>EKG:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="ekg_check">3 lead&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="ekg_check">12 lead&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="ekg_check">Pads&nbsp;&nbsp;&nbsp;&nbsp;
@@ -393,18 +393,18 @@
           <option value="16">SVT</option>
           <option value="17">V-fib</option>
         </select><br><br>
-        <input type="text" id="other_ekg_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_ekg_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Neuro:</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <input type="checkbox" class="neuro_check">Grossly intact&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" class="neuro_check">(-) Stroke test<br><br>
-        <input type="text" id="other_neuro_in" class="other_assess" placeholder="Other comments..."><br><br>
+        <input type="text" id="other_neuro_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <h5>Mental Status Exam (MSE):</h5>
-      <div class="sub_assess">
+      <div class="sub_cat">
         <h5>Appearance/Behavior:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="appear_check">Calm&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="appear_check">Clean&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="appear_check">Confused&nbsp;&nbsp;&nbsp;&nbsp;
@@ -413,117 +413,106 @@
           <input type="checkbox" class="appear_check">Restless&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="appear_check">Malaise&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="appear_check">Lethargic<br><br>
-          <input type="text" id="other_appear_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_appear_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
         <h5>IR/ST/LT Memory:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="memory_check">(+) IR&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="memory_check">(+) 5min&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="memory_check">(+) LT<br><br>
-          <input type="text" id="other_memory_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_memory_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
         <h5>Cognition/Concentration:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="cognition_check">(+) World&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="cognition_check">(+) $3.75&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="cognition_check">(+) Serial 7's&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="cognition_check">(+) Mickey Mouse<br><br>
-          <input type="text" id="other_cognition_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_cognition_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
         <h5>Insight/Judgement:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="insight_check">Makes a plan&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="insight_check">Problem solves&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="insight_check">Accepts a plan<br><br>
-          <input type="text" id="other_insight_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_insight_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
         <h5>Thoughts:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="thoughts_check">Linear&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="thoughts_check">Logical&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="thoughts_check">Tangential&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="thoughts_check">Psychotic<br><br>
-          <input type="text" id="other_thoughts_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_thoughts_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
         <h5>Speech:</h5>
-        <div class="sub_assess">
+        <div class="sub_cat">
           <input type="checkbox" class="speech_check">Clear&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" class="speech_check">Appropriate words<br><br>
-          <input type="text" id="other_speech_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_speech_in" class="large_in" placeholder="Other comments..."><br><br>
         </div>
       </div>
       <h4>Vitals:</h4>
-      <div class="sub_assess">
-        <input type="text" id="heart_in" placeholder="Heart Rate">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="bp_in" placeholder="BP">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="resp_in" placeholder="Resp Rate"><br><br>
-        <input type="text" id="sp_in" placeholder="SpO2">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="temp_in" placeholder="Temp">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="time2_in" placeholder="Time"><br><br>
+      <div class="sub_cat">
+        <input type="text" id="heart_in" class="small_in" placeholder="Heart Rate">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="bp_in" class="small_in" placeholder="BP">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="resp_in" class="small_in" placeholder="Resp Rate"><br><br>
+        <input type="text" id="sp_in" class="small_in" placeholder="SpO2">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="temp_in" class="small_in" placeholder="Temp">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="time2_in" class="small_in" placeholder="Time"><br><br>
         <button id="vitals_button">Add Vitals</button><br><br>
       </div>
       <h4>Mobility</h4>
-      <div class="sub_assess">
+      <div class="sub_cat">
           <input type="radio" name="mobility_check">Pt walks without assistance&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="radio" name="mobility_check">Pt walks with assistance&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="radio" name="mobility_check">Pt confined to bed<br><br>
-          <input type="text" id="other_mobility_in" class="other_assess" placeholder="Other comments..."><br><br>
+          <input type="text" id="other_mobility_in" class="large_in" placeholder="Other comments..."><br><br>
       </div>
       <textarea id="other_assess_text" cols="75" rows="5" placeholder="Other assessments"></textarea><br><br>
-      <input type="text" id="export_in" placeholder="Export condition"><br><br>
-      <input type="text" id="env_in" placeholder="Environment"><br><br>
-      <input type="text" id="prop_in" placeholder="Pt property taken">&nbsp;&nbsp;
+      <input type="text" id="export_in" class="med_in" placeholder="Export condition"><br><br>
+      <input type="text" id="env_in" class="med_in" placeholder="Environment"><br><br>
+      <input type="text" id="prop_in" class="med_in" placeholder="Pt property taken">&nbsp;&nbsp;
       <input type="checkbox" id="no_prop_check">No Pt property taken<br><br>
     </div>
 
     <hr><h3 class="header">Assessment Info</h3><hr><br><br><br>
     <div id="assess">    
-      <textarea id="assessment_text" cols="75" rows="5" placeholder="Assessment"></textarea><br><br><br>
+      <textarea id="assessment_text" class="large_text" cols="75" rows="5" placeholder="Assessment"></textarea><br><br><br>
     </div>
 
     <hr><h3 class="header">Plan Info</h3><hr><br><br><br>
     <div id="plan">
       <select id="plan_sel">
-        <option value="1">Response</option>
-        <option value="2">Arrival</option>
-        <option value="3">Assessment</option>
-        <option value="4">Vital Signs</option>
-        <option value="5">O2</option>
-        <option value="6">IV/IO</option>
-        <option value="7">Blood Sugar</option>
-        <option value="8">CPR</option>
-        <option value="9">Capnography</option>
-        <option value="10">Airway Advanced-B</option>
-        <option value="11">Airway OETT/NETT</option>
-        <option value="12">Airway LMA/Combi</option>
-        <option value="13">Airway Cric</option>
-        <option value="14">Airway Check</option>
-        <option value="15">Suction</option>
-        <option value="16">Drug</option>
-        <option value="17">Orders</option>
-        <option value="18">EKG</option>
-        <option value="19">EKG Fax</option>
-        <option value="20">Defib/Pacing</option>
-        <option value="21">Bandage</option>
-        <option value="22">Splint</option>
-        <option value="23">OTHER</option>
-        <option value="24">Extrication</option>
-        <option value="25">Spinal</option>
-        <option value="26">To Cot</option>
-        <option value="27">Refusal</option>
-        <option value="28">Pt Advised</option>
-        <option value="29">Ambulance</option>
-        <option value="30">Transfer Care</option>
-        <option value="31">Terminate Care</option>
-        <option value="32">Transport</option>
-        <option value="33">Radio Report</option>
-        <option value="34">Destination</option>
-        <option value="35">End of Contact</option>
+        <option value="1">O2</option>
+        <option value="2">IV/IO</option>
+        <option value="3">Blood Sugar</option>
+        <option value="4">CPR</option>
+        <option value="5">Capnography</option>
+        <option value="6">Airway Advanced-B</option>
+        <option value="7">Airway OETT/NETT</option>
+        <option value="8">Airway Cric</option>
+        <option value="9">Suction</option>
+        <option value="10">Drug</option>
+        <option value="11">Orders</option>
+        <option value="12">EKG</option>
+        <option value="13">Bandage</option>
+        <option value="14">Splint</option>
+        <option value="15">Extrication</option>
+        <option value="16">Spinal</option>
+        <option value="17">Stretcher</option>
+        <option value="18">Refusal</option>
+        <option value="19">Pt Advised</option>
+        <option value="20">Transfer Care</option>
+        <option value="21">Terminate Care</option>
+        <option value="22">Transport</option>
+        <option value="23">Radio Report</option>
+        <option value="24">Other</option>
       </select><br><br><br>
 
-      <div id="plan_o2">
-        <input type="text" id="o2_time_in" placeholder="Time"><br><br>
-        <input type="text" id="o2_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
+      <div id="plan_o2" class="plan_show">
+        <input type="text" id="o2_time_in" class="small_in" placeholder="Time"><br><br>
+        <input type="text" id="o2_in" class="small_in" placeholder="O2">&nbsp;&nbsp;lpm<br><br>
         <input type="radio" name="o2_radio">NC&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="o2_radio">NRB&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="o2_radio">Neb&nbsp;&nbsp;&nbsp;&nbsp;
@@ -533,10 +522,10 @@
         CPAP size:&nbsp;&nbsp;<input type="radio" name="cpap_size_radio">Large&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="cpap_size_radio">Medium<br><br>
         <input type="checkbox" id="bvm_check">BVM<br><br>
-        <input type="text" id="o2_results_in" placeholder="Notes..."><br><br><br>
+        <input type="text" id="o2_results_in" class="large_in" placeholder="Notes..."><br><br><br>
       </div>
 
-      <div id="plan_iv">
+      <div id="plan_iv" class="plan_hide">
         <input type="text" id="iv_time_in" placeholder="Time"><br><br>
         <input type="radio" name="iv_radio">IV&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="iv_radio">IO<br><br>
@@ -604,14 +593,14 @@
         <input type="text" id="iv_results_in" placeholder="Results"><br><br><br>
       </div>
 
-      <div id="plan_blood">
+      <div id="plan_blood" class="plan_hide">
         <input type="text" id="blood_time_in" placeholder="Time"><br><br>
         <input type="radio" name="blood_location_radio">Finger&nbsp;&nbsp;
         <input type="radio" name="blood_location_radio">IV<br><br>
         <input type="text" id="blood_read_in" placeholder="Reading">&nbsp;&nbsp;mg/dL<br><br><br>
       </div>
 
-      <div id="plan_cpr">
+      <div id="plan_cpr" class="plan_hide">
         <input type="text" id="cpr_time_in" placeholder="Time"><br><br>
         <input type="checkbox" class="cpr_check">No bystander CPR in progess<br><br>
         <input type="checkbox" class="cpr_check">CPR in progress on arrival<br><br>
@@ -620,7 +609,7 @@
         <input type="checkbox" class="cpr_check">CPR started or resumed<br><br><br>
       </div>
 
-      <div id="plan_capno">
+      <div id="plan_capno" class="plan_hide">
         <input type="text" id="capno_time_in" placeholder="Time"><br><br>
         <input type="radio" name="capno_radio">NC&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="capno_radio">ET<br><br>
@@ -635,7 +624,7 @@
         <input type="text" id="capno_other_in" placeholder="Other"><br><br><br>
       </div>
 
-      <div id="plan_air_adv">
+      <div id="plan_air_adv" class="plan_hide">
         <input type="text" id="air_adv_time_in" placeholder="Time"><br><br>
         <input type="text" id="opa_in" placeholder="OPA Size"><br><br>
         <input type="text" id="npa_in" placeholder="NPA Size">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -650,7 +639,7 @@
         <textarea id="air_adv_result_text" cols="75" rows="5" placeholder="Results"></textarea><br><br>
       </div>
 
-      <div id="plan_air_oett">
+      <div id="plan_air_oett" class="plan_hide">
         <input type="text" id="air_oett_time_in" placeholder="Time"><br><br>
         <input type="radio" name="intubate_radio">Oral Intubation&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="intubate_radio">Nasal Intubation<br><br>
@@ -700,12 +689,12 @@
         <textarea id="oett_result_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br>
       </div>
 
-      <div id="plan_air_cric">
+      <div id="plan_air_cric" class="plan_hide">
         <input type="text" id="air_cric_time_in" placeholder="Time"><br><br>
         <textarea id="air_cric_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br>
       </div>
 
-      <div id="plan_suction">
+      <div id="plan_suction" class="plan_hide">
         <input type="text" id="suction_time_in" placeholder="Time"><br><br>
         <input type="radio" name="suction_radio1">Yankuer&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="suction_radio1">French Tip<br><br>
@@ -713,7 +702,7 @@
         <textarea id="suction_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br>     
       </div>
 
-      <div id="plan_drug">
+      <div id="plan_drug" class="plan_hide">
         <input type="text" id="drug_time_in" placeholder="Time"><br><br>
         <select id="drug_sel">
           <option value="1">Adenosine</option>
@@ -768,7 +757,7 @@
         <textarea id="drug_text" cols="75" rows="5" placeholder="Results"></textarea><br><br><br> 
       </div>
 
-      <div id="plan_orders">
+      <div id="plan_orders" class="plan_hide">
         <input type="text" id="orders_time_in" placeholder="Time"><br><br>
         <select id="hospital_sel">
           <option value="1">Shands</option>
@@ -779,7 +768,7 @@
         <textarea id="orders_text" cols="75" rows="5" placeholder="Orders"></textarea><br><br><br>  
       </div>
 
-      <div id="plan_ekg">
+      <div id="plan_ekg" class="plan_hide">
         <input type="text" id="ekg_time_in" placeholder="Time"><br><br>
         <input type="radio" name="ekg_radio1">3 lead&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="ekg_radio1">12 lead&nbsp;&nbsp;&nbsp;&nbsp;
@@ -814,7 +803,7 @@
         <textarea id="ekg_text" cols="75" rows="5" placeholder="Additional Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_bandage">
+      <div id="plan_bandage" class="plan_hide">
         <input type="text" id="bandage_time_in" placeholder="Time"><br><br>
         <select id="bleed_type_in">
           <option value="0">--Type of bleed--</option>
@@ -827,18 +816,18 @@
         <textarea id="bandage_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_splint">
+      <div id="plan_splint" class="plan_hide">
         <input type="text" id="splint_time_in" placeholder="Time"><br><br>
         <input type="text" id="splint_loc_in" placeholder="Location"><br><br>
         <textarea id="splint_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_extric">
+      <div id="plan_extric" class="plan_hide">
         <input type="text" id="extric_time_in" placeholder="Time"><br><br>
         <textarea id="extric_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_spinal">
+      <div id="plan_spinal" class="plan_hide">
         <input type="text" id="spinal_time_in" placeholder="Time"><br><br>
         <input type="checkbox" class="spinal_check">Manual C-Spine<br><br>
         <input type="checkbox" class="spinal_check">C-Collar<br><br>
@@ -852,7 +841,7 @@
         <textarea id="spinal_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_stretcher">
+      <div id="plan_stretcher" class="plan_hide">
         <input type="text" id="stretcher_time" placeholder="Time"><br><br>
         <select id="stretcher_sel">
           <option value="1">Walked without assistance</option>
@@ -874,7 +863,7 @@
         <textarea id="stretcher_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_refusal">
+      <div id="plan_refusal" class="plan_hide">
         <input type="text" id="refusal_time_in" placeholder="Time"><br><br>
         <input type="radio" name="via_radio">Radio&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="via_radio">Telephone<br><br>
@@ -893,12 +882,12 @@
         <textarea id="refusal_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_advised">
+      <div id="plan_advised" class="plan_hide">
         <input type="text" id="advised_time_in" placeholder="Time"><br><br>
         <textarea id="advised_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_transfer">
+      <div id="plan_transfer" class="plan_hide">
         <input type="text" id="transfer_time_in" placeholder="Time"><br><br>
         <input type="checkbox" class="transfer_check">AMR EMT-B<br><br>
         <input type="checkbox" class="transfer_check">AMR EMT-P<br><br>
@@ -912,16 +901,16 @@
           <option value="1">BIS</option>
           <option value="2">At hospital</option>
           <option value="3">Report left at hospital</option>
-        </select>
+        </select><br><br><br>
       </div>
 
-      <div id="plan_terminate">
+      <div id="plan_terminate" class="plan_hide">
         <input type="text" id="terminate_time_in" placeholder="Time"><br><br>
         <input type="text" id="term_md_in" placeholder="MD"><br><br>
         <input type="checkbox" id="dnr_check">DNR/Advance Directives<br><br><br>
       </div>
 
-      <div id="plan_transport">
+      <div id="plan_transport" class="plan_hide">
         <input type="text" id="transport_time_in" placeholder="Time"><br><br>
         <input type="text" id="trans_arrive_in" placeholder="Arrival Time">&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="text" id="trans_depart_in" placeholder="Departure Time"><br><br>
@@ -953,7 +942,7 @@
         </select><br><br><br>
       </div>
 
-      <div id="plan_radio">
+      <div id="plan_radio" class="plan_hide">
         <input type="text" id="radio_time_in" placeholder="Time"><br><br>
         <input type="radio" name="radio_via">Radio&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="radio_via">Phone<br><br>
@@ -963,8 +952,11 @@
         <textarea id="radio_text" cols="75" rows="5" placeholder="Comments"></textarea><br><br><br>
       </div>
 
-      <div id="plan_other">
-        <textarea id="other_text" cols="75" rows="5" placeholder="Other comments"></textarea><br><br><br></div>
+      <div id="plan_other" class="plan_hide">
+        <textarea id="other_text" cols="75" rows="5" placeholder="Other comments"></textarea><br><br><br>
+      </div>
+
+      <button id="plan_add">Add / Next</button><br><br><br>
     </div>
 
   </body>

@@ -20,12 +20,38 @@ body {
 	font-weight: bold;
 }
 
-.sub_assess {
+.sub_cat {
 	margin-left: 5%;
 }
 
-.other_assess {
-	width: 56.5%;
+.large_text {
+	width: 90%;
+	height: 5%;
+}
+
+.small_text {
+	width: 90%;
+	height: 2%;
+}
+
+.large_in {
+	width: 75%;
+}
+
+.med_in {
+	width: 45%;
+}
+
+.small_in {
+	width: 25%;
+}
+
+.plan_show {
+	display: inline;
+}
+
+.plan_hide {
+	display: none;
 }
 
 #title {
@@ -74,12 +100,4 @@ body {
 
 #vitals_button {
 	width: 21.5%;
-}
-
-#plan_radio {
-	display: inline;
-}
-
-#plan_o2, #plan_iv, #plan_blood, #plan_cpr, #plan_capno, #plan_air_adv, #plan_air_oett, #plan_air_cric, #plan_suction, #plan_drug, #plan_orders, #plan_ekg, #plan_bandage, #plan_splint, #plan_extric, #plan_spinal, #plan_stretcher, #plan_refusal, #plan_advised, #plan_transfer, #plan_terminate, #plan_transport {
-	display: none;
 }
